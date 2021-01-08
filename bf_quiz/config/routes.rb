@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  # # Root path
+  root to: 'pages#home'
  
   # Create routes for users
   # users     GET    /users(.:format)          users#index
