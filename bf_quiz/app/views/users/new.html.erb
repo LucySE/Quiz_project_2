@@ -1,0 +1,36 @@
+<br>
+<div class="task-section-heading">
+<h2>Create an account</h2>
+</div>
+<br>
+<% if @user.errors.full_messages.any? %>
+  <strong>Errors:</strong>
+  <ul>
+    <% @user.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+    <% end  %>
+  </ul>
+<% end %>
+
+<%# TODO: Move form to partial %>
+<%# Create account form %>
+<%= form_with model: @user, local: true do |f| %>
+  <%= f.label :username %>
+  <br>
+  <%= f.text_field :username %>
+  <br>
+  <%= f.label :email %>
+  <br>
+  <%= f.text_field :email %>
+  <br>
+  <%= f.label :password %>
+  <br>
+  <%= f.password_field :password %>
+  <br>
+  <%= f.label :password_confirmation %>
+  <br>
+  <%= f.password_field :password_confirmation %>
+  <br>
+  <%= f.submit 'Create account', :class => 'primary-button' %>
+<% end %> 
+<%# link_to 'Cancel', some_path %>
