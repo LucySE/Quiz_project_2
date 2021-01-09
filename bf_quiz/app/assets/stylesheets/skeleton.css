@@ -1,3 +1,15 @@
+/* Our Variables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+  /* 
+    Primary dark colour used for main background and
+    when the text appears on a white background 
+  */
+  --primary-dark-color: #011627; 
+
+}
+
+
 /*
 * Skeleton V2.0.4
 * Copyright 2014, Dave Gamache
@@ -24,7 +36,6 @@
 - Clearing
 - Media Queries
 */
-
 
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -125,7 +136,9 @@ body {
   line-height: 1.6;
   font-weight: 400;
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222; }
+  color: white;
+  background-color: var(--primary-dark-color); 
+}
 
 
 /* Typography
@@ -240,7 +253,9 @@ select {
   border: 1px solid #D1D1D1;
   border-radius: 4px;
   box-shadow: none;
-  box-sizing: border-box; }
+  box-sizing: border-box; 
+  color: var(--primary-dark-color); ;
+}
 /* Removes awkward default styles on some inputs for iOS */
 input[type="email"],
 input[type="number"],
