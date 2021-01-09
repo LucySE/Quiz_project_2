@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  puzzle_id: 
+  time_completed: MyString
+  puzzle_count: 1
+
+two:
+  user_id: 1
+  puzzle_id: 
+  time_completed: MyString
+  puzzle_count: 1

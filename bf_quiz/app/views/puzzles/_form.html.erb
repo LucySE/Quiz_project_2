@@ -1,0 +1,26 @@
+<%= form_with model:@puzzle, local:true, html: {multipart: true}  do |f| %>
+
+<%= f.label :question %>
+<%= f.text_field :question %>
+
+<%= f.label :solution %>
+<%= f.text_field :solution %>
+
+<%= f.label :clue %>
+<%= f.text_field :clue %>
+
+<%= f.label :puzzle_type %>
+<%= f.text_field :puzzle_type %>
+
+<%= f.label :incorrect_a %>
+<%= f.text_field :incorrect_a %>
+
+<%= f.label :incorrect_b %>
+<%= f.text_field :incorrect_b %>
+
+<%= f.label :incorrect_c %>
+<%= f.text_field :incorrect_c %>
+
+
+<%= f.submit id:'submit_button'%>
+<%end %>

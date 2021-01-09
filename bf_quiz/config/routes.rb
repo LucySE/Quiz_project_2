@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
 
+resources :puzzles
+resources :games
+resources :scores
   # # Root path
   root to: 'pages#home'
- 
+  get '/win' => 'pages#win'
+  get '/lose' => 'pages#lose'
+
   # Create routes for users
   # users     GET    /users(.:format)          users#index
   #           POST   /users(.:format)          users#create

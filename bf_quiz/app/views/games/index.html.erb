@@ -1,0 +1,10 @@
+<h1>Games#index</h1>
+
+<% @games.each do |g|%>
+<span>
+<%= link_to g.puzzle.question, puzzle_path(g.puzzle_id)%>
+</span><br>
+<span>
+<%= link_to g.user.username, puzzle_path(g.puzzle_id)%>
+</span><br>
+<% end %>
