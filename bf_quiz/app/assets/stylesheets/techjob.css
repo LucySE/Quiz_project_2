@@ -1,9 +1,27 @@
 /* Stylesheet for our custom CSS */
 
+#game-logo {
+    height: 48px;
+    margin-bottom: 24px;
+}
+
+
 #game-title {
     /* The Software Interview Game (on home page) */
     font-size: 24px;
-    font-weight: medium;
+    font-weight: 500;
+}
+
+.main-menu {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+
+.spacer {
+    height: 50px;
 }
 
 .centering {
@@ -17,4 +35,8 @@ footer {
     /* Sticky footer */
     position: fixed;
     bottom: 24px;
+}
+
+small {
+    color: rgba(255, 255, 255, 0.6);
 }
