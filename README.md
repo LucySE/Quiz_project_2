@@ -2,7 +2,7 @@
 
 
 ## Team
-[Brooke](https://github.com/dutchessoflx), [Lucy](https://github.com/LucySE/), [Manda](https://github.com/nimisaya), [Reece](https://github.com/reecen96)
+[Brooke](https://github.com/dutchessoflx), [Lucy](https://github.com/LucySE/), [Manda](https://github.com/nimisaya) and [Reece](https://github.com/reecen96)
 
 ## Overview
 Preparing for your first interview as a software developer (web)? Well, we have the game for you. Play <Name to be decided> and prepare for your next in real life interview by applying for a job at Tech Job Corp^.
