@@ -1,11 +1,30 @@
 <article>
-    <header>
+    <header class="centering">
         <%= image_tag 'TechCorpLogo.svg', alt: "Tech Job Corp" %>
     </header>
-    <section>
-    <header>
-        <h1>
-    </header>
+    <br/>
+    <section class="eleven columns">
+        <header>
+            <h1 id="game-title">
+                The Software Interview Game
+            </h1>
+        </header>
+        <p>
+            The late nights, exams, group projects (oh the humanity...), billions of resumes and it’s all come down to this...the interview! Well, we got you fam. Apply for the job at our 100% totally legit* Tech job corp. At Tech job corp we believe in ping pong tables, pointing at post-its, lines on whiteboards and slathering your laptop in stickers. Just submit your resume below and we’ll see you at your interview**.
+        </p>
+
+        <small>
+            * Tech job corp is an artificial fake news, non-existent, maybe not a real company.
+            <br/>
+            ** It’s just for practice and fun. No job here, sorry.
+        </small>
     </section>
+    <nav>
+        <%= link_to 'Apply for Tech Job Corp', new_user_path, class: "button button-primary" %>
+        <br />
+        <%= link_to 'Login', login_path, class: "button button-secondary" %>
+        <br />
+        <%= link_to 'View our top employees', scores_path, class: "button button-secondary" %>
+    </nav>
 </article>
   
