@@ -1,0 +1,20 @@
+/* Stylesheet for our custom CSS */
+
+#game-title {
+    /* The Software Interview Game (on home page) */
+    font-size: 24px;
+    font-weight: medium;
+}
+
+.centering {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer {
+    /* Sticky footer */
+    position: fixed;
+    bottom: 24px;
+}
