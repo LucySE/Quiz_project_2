@@ -1,0 +1,7 @@
+/* Stylesheet for our custom CSS */
+
+footer {
+    /* Sticky footer */
+    position: fixed;
+    bottom: 24px;
+}
