@@ -6,6 +6,8 @@
     when the text appears on a white background 
   */
   --primary-dark-color: #011627; 
+  --link-color: #1EAEDB;
+  --hover-link-color: #0FA0CE;
 }
 
 
@@ -41,7 +43,7 @@
 .container {
   position: relative;
   width: 100%;
-  max-width: 960px;
+  max-width: 640px;
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box; }
@@ -170,9 +172,9 @@ p {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #1EAEDB; }
+  color: var(--link-color); }
 a:hover {
-  color: #0FA0CE; }
+  color: var(--hover-link-color); }
 
 
 /* Buttons
@@ -183,20 +185,20 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"] {
   display: inline-block;
-  height: 38px;
+  height: 48px;
   padding: 0 30px;
-  color: #555;
+  color: #56CCF2;
   text-align: center;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 600;
-  line-height: 38px;
+  line-height: 48px;
   letter-spacing: .1rem;
   text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
   background-color: transparent;
   border-radius: 4px;
-  border: 1px solid #bbb;
+  border: 1px solid #56CCF2;
   cursor: pointer;
   box-sizing: border-box; }
 .button:hover,
@@ -217,7 +219,7 @@ button.button-primary,
 input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
-  color: #FFF;
+  color: var(--primary-dark-color);
   background-color: #33C3F0;
   border-color: #33C3F0; }
 .button.button-primary:hover,
