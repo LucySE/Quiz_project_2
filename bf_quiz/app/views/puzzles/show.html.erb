@@ -1,0 +1,8 @@
+<h1>Puzzles#show</h1>
+
+<p><%= @puzzle.question%></p>
+
+<p><%= link_to @puzzle.solution, win_path %></p>
+<p><%= link_to @puzzle.incorrect_a, lose_path %></p>
+<p><%= link_to @puzzle.incorrect_c, lose_path%></p>
+<p><%= link_to @puzzle.incorrect_b, lose_path %></p>

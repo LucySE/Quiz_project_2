@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  question: MyString
+  solution: MyString
+  clue: MyString
+  incorrect_a: MyString
+  incorrect_b: MyString
+  incorrect_c: MyString
+  type: 
+
+two:
+  question: MyString
+  solution: MyString
+  clue: MyString
+  incorrect_a: MyString
+  incorrect_b: MyString
+  incorrect_c: MyString
+  type: 

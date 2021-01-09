@@ -20,6 +20,15 @@
             <%= @current_user.username %>
           </li>
           <li>
+            <%= link_to 'Puzzles', puzzles_path%>
+          </li>
+          <li>
+            <%= link_to 'Games', games_path %>
+          </li>
+          <li>
+            <%= link_to 'Scores', scores_path %>
+          </li>
+          <li>
             <%= link_to 'Logout', login_path, method: 'delete' %>
           </li>
         <% else %>
@@ -39,8 +48,8 @@
       <main>
         <%= yield %>
       </main>
-      <footer> 
-        <small>&copy; 2021</small> 
+      <footer>
+        <small>&copy; 2021</small>
       </footer>
     </div>
   </body>

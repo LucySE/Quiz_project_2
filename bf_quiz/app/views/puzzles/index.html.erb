@@ -1,0 +1,11 @@
+<h1>Puzzles#index</h1>
+<div >
+  <% @puzzles.each do |p| %>
+  <span>
+    <%= link_to p.id, puzzle_path(p.id) %>
+  </span> <br>
+  <% end %>
+  <div>
+    <%= link_to "Add a Puzzle ", new_puzzle_path, class:"button"  %>
+  </div>
+</div>

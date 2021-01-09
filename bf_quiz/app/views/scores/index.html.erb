@@ -1,0 +1,21 @@
+<h1>Scores#index-Leaderboard?</h1>
+<ul>
+<% @scores.each do |s| %>
+<li>Time it took to complete:
+<%= s.time_completed %>seconds
+</li>
+
+<li> Puzzle number:
+<%= s.puzzle_id %>
+</li>
+
+<li>Username:
+<%= s.user.username %>
+</li>
+
+<li>Number of puzzles completed:
+<%= s.puzzle_count %>
+</li>
+
+<% end %>
+</ul>

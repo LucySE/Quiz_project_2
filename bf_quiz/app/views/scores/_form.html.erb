@@ -1,0 +1,15 @@
+<%= form_with model:@score, local:true, html: {multipart: true}  do |f| %>
+
+<%= f.label :user_id %>
+<%= f.text_field :user_id %>
+
+<%= f.label :puzzle_id %>
+<%= f.text_field :puzzle_id %>
+
+<%= f.label :time_completed %>
+<%= f.text_field :time_completed %>
+
+<%= f.label :puzzle_count %>
+<%= f.text_field :puzzle_count %>
+<%= f.submit id:'submit_button'%>
+<%end %>
