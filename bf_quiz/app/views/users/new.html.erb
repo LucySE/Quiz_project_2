@@ -1,8 +1,12 @@
-<br>
-<div class="task-section-heading">
-<h2>Create an account</h2>
-</div>
-<br>
+<article>
+  <section>
+    <header>
+      <h1 class="page-title">Welcome to Tech Job Corp.!</h1>
+      <p>We're so happy you've decided to apply. Submit your resume below and we'll get back to you shortly (maybe...probably just ghost you).</p>
+    </header>
+  </section>
+</article>
+
 <% if @user.errors.full_messages.any? %>
   <strong>Errors:</strong>
   <ul>
@@ -15,7 +19,7 @@
 <%# TODO: Move form to partial %>
 <%# Create account form %>
 <%= form_with model: @user, local: true do |f| %>
-  <%= f.label :username %>
+  <%= f.label :username, 'Applicant name' %>
   <%= f.text_field :username %>
   <br>
   <%= f.label :email %>
@@ -27,6 +31,6 @@
   <%= f.label :password_confirmation %>
   <%= f.password_field :password_confirmation %>
   <br>
-  <%= f.submit 'Create account', :class => 'button-primary' %>
+  <%= f.submit "Let's play", :class => 'button-primary' %>
+  <%= link_to 'Cancel', root_path, :class => 'button button-secondary' %>
 <% end %> 
-<%# link_to 'Cancel', some_path %>
