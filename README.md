@@ -15,7 +15,9 @@ Preparing for your first interview as a software developer (web)? Well, we have 
 ## Tech
 
 - Ruby on Rails
-- CSS & HTML
+- Skeleton CSS framework
+- Custom CSS
+- HTML
 - Deployed on Heroku
 
 ## Features
