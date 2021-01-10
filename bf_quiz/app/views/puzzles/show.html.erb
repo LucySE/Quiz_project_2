@@ -1,8 +1,50 @@
 <h1>Puzzles#show</h1>
-
+<% if @puzzle.id === @puzzles.last.id %>
+<p><%= @puzzle.question%></p>
+<form action="/win" method="get">
+  <label>
+    <input type="radio" name="puzzle" value="<%=@puzzle.solution%>">
+    <%= @puzzle.solution%>
+  </label>
+  <label>
+    <input type="radio" name="puzzle" value="<%=@puzzle.incorrect_a%>">
+    <%= @puzzle.incorrect_a%>
+  </label>
+  <label>
+    <input type="radio" name="puzzle" value="<%=@puzzle.incorrect_b%>">
+    <%= @puzzle.incorrect_b%>
+  </label>
+  <label>
+      <input type="radio" name="puzzle" value="<%=@puzzle.incorrect_c%>">
+      <%= @puzzle.incorrect_c%>
+    </label>
+<input type="submit" value="Finish Quiz">
+</form>
+<% else %>
 <p><%= @puzzle.question%></p>
 
-<p><%= link_to @puzzle.solution, win_path %></p>
-<p><%= link_to @puzzle.incorrect_a, lose_path %></p>
-<p><%= link_to @puzzle.incorrect_c, lose_path%></p>
-<p><%= link_to @puzzle.incorrect_b, lose_path %></p>
+
+<form action="/puzzles/<%=@puzzle.id+1%>" method="get">
+  <label>
+    <input type="radio" name="puzzle" value="<%=@puzzle.solution%>">
+    <%= @puzzle.solution%>
+  </label>
+  <label>
+    <input type="radio" name="puzzle" value="<%=@puzzle.incorrect_a%>">
+    <%= @puzzle.incorrect_a%>
+  </label>
+  <label>
+    <input type="radio" name="puzzle" value="<%=@puzzle.incorrect_b%>">
+    <%= @puzzle.incorrect_b%>
+  </label>
+  <label>
+      <input type="radio" name="puzzle" value="<%=@puzzle.incorrect_c%>">
+      <%= @puzzle.incorrect_c%>
+    </label>
+
+  <input type="submit" value="Next Question">
+
+
+
+</form>
+<% end%>
