@@ -1,8 +1,11 @@
-<br>
-<div class="task-section-heading">
-<h2>Login</h2>
-</div>
-<br>
+<article>
+  <section>
+    <header>
+      <h1 class="page-title">Welcome back to Tech Job Corp.!</h1>
+      <p>We knew you couldn't resist our offering. After all we are an inclusive company with friday night drinks every second sunday in the Bermuda triangle office.</p>
+    </header>
+  </section>
+
 
 <%# Print out an error message, if the SessionController set one %>
 <% if flash[:error] %>
@@ -25,6 +28,7 @@
     <br>
 
     <%= f.submit 'Login', class: 'button-primary' %>
+    <%= link_to 'Cancel', root_path, class: 'button button-secondary' %>
 <% end %>
-<%# TODO: link_to 'Cancel', name_destination_path, class: 'name-of-the-css-class'%>
-<%# example: link_to 'Cancel', workshops_path, class: 'secondary-button' %>
+
+</article>
