@@ -1,3 +1,69 @@
+<article>
+    <% if @current_user.present? %>
+    <header class="centering">
+        <%= image_tag 'TechCorpLogo.svg', alt: "Tech Job Corp", id: "game-logo" %>
+    </header>
+    <br/>
+    <section>
+        <header>
+            <h1 class="page-title">
+                Game over
+            </h1>
+        </header>
+        <div class="box-background">
+        <p>
+            Dear <strong><%= @current_user.username %></strong>,
+        </p>
+        <p>     
+            We are pleased to make you an offer of employment at Tech
+            Job Corp. Your annual salary will be <strong>$XXXXX</strong>. 
+        </p>
+        <p>
+            Once you have signed your contract for eternal servitude, please collect your branded t-shirt, sticker and water bottle, and head to your assigned hotdesk. You now belong to us.
+        </p>
+        <p>
+            Yours sincerly,
+            <br />
+            <%= link_to "Brooke", "https://github.com/dutchessoflx", :target => "_blank" %>, 
+            <%= link_to "Lucy", "https://github.com/LucySE/", :target => "_blank" %>, 
+            <%= link_to "Manda", "https://github.com/nimisaya", :target => "_blank" %> 
+            and 
+            <%= link_to "Reece", "https://github.com/reecen96", :target => "_blank" %>
+            <br />
+            <em>CEOs of Tech Job Corp.</em>
+        </p>
+        </div> <!-- class: box-background -->
+    </section>
+    <div class="spacer"></div>
+    <section>
+        <nav aria-label="Game menu" class="main-menu">
+            <%= link_to 'Meet your top collegues', scores_path, class: "button button-primary" %>
+            <%= link_to 'Interview again for a pay rise', new_game_path, class: "button button-secondary" %>
+        </nav>
+    </section>
+    <%end%>
+</article>
+
+
+<hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <p>Congratulations you have completed the Quiz!</p>
 
 <p>Your Score was...<%=@current_user.scores.pluck(:puzzle_count).join().to_i%></p>
