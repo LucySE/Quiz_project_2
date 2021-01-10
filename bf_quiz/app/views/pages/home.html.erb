@@ -3,6 +3,7 @@
         <%= image_tag 'TechCorpLogo.svg', alt: "Tech Job Corp", id: "game-logo" %>
     </header>
     <br/>
+    <% if @current_user.present? %>
     <section>
         <header>
             <h1 class="page-title">
@@ -10,13 +11,43 @@
             </h1>
         </header>
         <p>
-            The late nights, exams, group projects (oh the humanity...), billions of resumes and it’s all come down to this...the interview! 
+            The late nights, exams, group projects (oh the humanity...), billions of resumes and it’s all come down to this...the interview!
             <br />
             <br />
             Well, we got you fam. Apply for the job at our 100% totally legit Tech Job Corp*. At Tech Job Corp we believe in ping pong tables, pointing at post-its, lines on whiteboards and slathering your laptop in stickers. Just submit your resume below and we’ll see you at your interview.
         </p>
     </section>
-    
+
+    <section>
+        <nav aria-label="Game menu" class="main-menu">
+
+          <%= form_with model:@game, local:true, html: {multipart: true}  do |f| %>
+          <%= f.hidden_field :status, value: false%>
+          <%= f.hidden_field :user_id, value: @current_user%>
+          <%= f.hidden_field :puzzle_id, value: 1%>
+          <%= f.submit id:'submit_button'%>
+          <%end %>
+
+            <%= link_to 'Start Application Quiz', new_game_path, class: "button button-primary" %>
+
+            <%= link_to 'View our top employees', scores_path, class: "button button-secondary" %>
+        </nav>
+    </section>
+    <% else %>
+    <section>
+        <header>
+            <h1 class="page-title">
+                The Software Interview Game
+            </h1>
+        </header>
+        <p>
+            The late nights, exams, group projects (oh the humanity...), billions of resumes and it’s all come down to this...the interview!
+            <br />
+            <br />
+            Well, we got you fam. Apply for the job at our 100% totally legit Tech Job Corp*. At Tech Job Corp we believe in ping pong tables, pointing at post-its, lines on whiteboards and slathering your laptop in stickers. Just submit your resume below and we’ll see you at your interview.
+        </p>
+    </section>
+
     <section>
         <nav aria-label="Game menu" class="main-menu">
             <%= link_to 'Apply for Tech Job Corp', new_user_path, class: "button button-primary" %>
@@ -26,10 +57,10 @@
             <%= link_to 'View our top employees', scores_path, class: "button button-secondary" %>
         </nav>
     </section>
+    <%end%>
             <p>
             <small>
                 * Tech job corp is an artificial, fake news, non-existent, not real company. We're not evil...honest.
             </small>
         </p>
 </article>
-  

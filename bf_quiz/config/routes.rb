@@ -7,6 +7,7 @@ resources :scores
   root to: 'pages#home'
   get '/win' => 'pages#win'
   get '/lose' => 'pages#lose'
+  post '/'  => 'page#play' 
 
   # Create routes for users
   # users     GET    /users(.:format)          users#index

@@ -16,6 +16,7 @@ class PuzzlesController < ApplicationController
   def show
     @puzzle = Puzzle.find params[:id]
     @puzzles = Puzzle.all
+  
   end
 
   def edit

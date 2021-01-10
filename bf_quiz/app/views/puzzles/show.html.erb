@@ -3,19 +3,19 @@
 <p><%= @puzzle.question%></p>
 <form action="/win" method="get">
   <label>
-    <input type="radio" name="puzzle" value="<%=@puzzle.solution%>">
+    <input type="radio" name="puzzle" value="<%=@current_user.scores.pluck(:puzzle_count).join().to_i+1%>">
     <%= @puzzle.solution%>
   </label>
   <label>
-    <input type="radio" name="puzzle" value="<%=@puzzle.incorrect_a%>">
+    <input type="radio" name="puzzle" value="0">
     <%= @puzzle.incorrect_a%>
   </label>
   <label>
-    <input type="radio" name="puzzle" value="<%=@puzzle.incorrect_b%>">
+    <input type="radio" name="puzzle" value="0">
     <%= @puzzle.incorrect_b%>
   </label>
   <label>
-      <input type="radio" name="puzzle" value="<%=@puzzle.incorrect_c%>">
+      <input type="radio" name="puzzle" value="0">
       <%= @puzzle.incorrect_c%>
     </label>
 <input type="submit" value="Finish Quiz">
@@ -26,11 +26,11 @@
 
 <form action="/puzzles/<%=@puzzle.id+1%>" method="get">
   <label>
-    <input type="radio" name="puzzle" value="<%=@puzzle.solution%>">
+    <input type="radio" name="puzzle" value="<%=@current_user.scores.pluck(:puzzle_count).join().to_i+1%>">
     <%= @puzzle.solution%>
   </label>
   <label>
-    <input type="radio" name="puzzle" value="<%=@puzzle.incorrect_a%>">
+    <input type="radio" name="puzzle" value="<%=@current_user.scores.pluck(:puzzle_count).join().to_i%>">
     <%= @puzzle.incorrect_a%>
   </label>
   <label>
@@ -48,3 +48,15 @@
 
 </form>
 <% end%>
+
+<%= form_with model:@score, local:true, html: {multipart: true}  do |f| %>
+<%= f.hidden_field :puzzle_count, value: @current_user.scores.pluck(:puzzle_count).join.to_i + params[:puzzle].to_i%>
+<%= f.hidden_field :user_id, value: @current_user%>
+<%= f.hidden_field :puzzle_id, value: @puzzle.id%>
+<%= f.submit id:'submit_button'%>
+<%end %>
+
+<p>Current User: <%= @current_user.username %></p>
+<p>Score= <%= @current_user.scores.pluck(:puzzle_count).join.to_i + params[:puzzle].to_i%></p>
+<%= params %><br>
+<%= params[:puzzle] %>

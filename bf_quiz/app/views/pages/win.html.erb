@@ -1,4 +1,6 @@
 <p>Congratulations you have completed the Quiz!</p>
 
-<p>Your Score was...</p>
+<p>Your Score was...<%=@current_user.scores.pluck(:puzzle_count).join().to_i%></p>
 <p>You took "x" minutes</p>
+
+<%= params %>

@@ -11,6 +11,7 @@ class ScoresController < ApplicationController
 
   def index
     @scores = Score.all
+    # @scores = Score.where(user_id: @current_user)
   end
 
   def show
