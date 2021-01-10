@@ -2,10 +2,10 @@
   <section>
     <header>
       <h1 class="page-title">Welcome to Tech Job Corp.!</h1>
-      <p>We're so happy you've decided to apply. Submit your resume below and we'll get back to you shortly (maybe...probably just ghost you).</p>
+      <p>We're so happy you've decided to apply. Submit your resume below and we'll get back to you shortly (...probably just ghost you).</p>
     </header>
   </section>
-</article>
+
 
 <% if @user.errors.full_messages.any? %>
   <strong>Errors:</strong>
@@ -34,3 +34,4 @@
   <%= f.submit "Let's play", :class => 'button-primary' %>
   <%= link_to 'Cancel', root_path, :class => 'button button-secondary' %>
 <% end %> 
+</article>
