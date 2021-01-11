@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
 
-resources :puzzles
-resources :games
-resources :scores
   # # Root path
   root to: 'pages#home'
   get '/win' => 'pages#win'
@@ -26,5 +23,12 @@ resources :scores
   get '/login'  => 'session#new'        # showing the login form
   post '/login' => 'session#create'     # form submits to here, performs login, redirects
   delete '/login' => 'session#destroy'  # logout link goes here, perform logout, redirect
+
+  # Create routes for puzzles
+
+  resources :puzzles
+
+  # Create routes for games
+  resources :games
 
 end
