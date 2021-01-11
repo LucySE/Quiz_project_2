@@ -1,5 +1,5 @@
 # Seed data for Users
-UUser.destroy_all
+User.destroy_all
 print "Creating users..."
 u1=User.create!(
     email: "reece@ga.com",
