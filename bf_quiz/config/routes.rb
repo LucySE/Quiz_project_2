@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   # # Root path
   root to: 'pages#home'
-  get '/win' => 'pages#win'
+  get '/gameover' => 'pages#gameover'
   post '/'  => 'page#play' 
 
   # Create routes for users

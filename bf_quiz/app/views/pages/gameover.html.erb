@@ -10,6 +10,8 @@
                 Game over
             </h1>
         </header>
+
+        <!-- Display offer letter to user with their 'salary' -->
         <div class="box-background">
         <p>
             Dear <strong><%= @current_user.username %></strong>,
@@ -37,36 +39,9 @@
     <div class="spacer"></div>
     <section>
         <nav aria-label="Game menu" class="main-menu">
-            <%= link_to 'Meet your top collegues', scores_path, class: "button button-primary" %>
+            <%# link_to 'Meet your top collegues', scores_path, class: "button button-primary" %>
             <%= link_to 'Interview again for a pay rise', new_game_path, class: "button button-secondary" %>
         </nav>
     </section>
     <%end%>
 </article>
-
-
-<hr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<p>Congratulations you have completed the Quiz!</p>
-
-<p>Your Score was...<%=@current_user.scores.pluck(:puzzle_count).join().to_i%></p>
-<p>You took "x" minutes</p>
-
-<%= params %>
