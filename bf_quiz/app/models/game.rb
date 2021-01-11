@@ -1,4 +1,4 @@
 class Game < ApplicationRecord
-  belongs_to :puzzle
+  has_many :puzzles
   belongs_to :user
 end

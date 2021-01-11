@@ -1,3 +1,3 @@
 class Puzzle < ApplicationRecord
-  has_many :game
+  belongs_to :game
 end
