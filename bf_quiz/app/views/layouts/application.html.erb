@@ -19,14 +19,12 @@
           <li id="greeting-user">
             <%= @current_user.username %>
           </li>
+          <!-- Temporary Nav for testing purposes only. -->
           <li>
             <%= link_to 'Puzzles', puzzles_path%>
           </li>
           <li>
             <%= link_to 'Games', games_path %>
-          </li>
-          <li>
-            <%= link_to 'Scores', scores_path %>
           </li>
           <li>
             <%= link_to 'Logout', login_path, method: 'delete' %>
