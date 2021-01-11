@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   # # Root path
   root to: 'pages#home'
   get '/gameover' => 'pages#gameover'
-  get '/lose' => 'pages#lose'
   post '/'  => 'pages#play'
   post '/users/:id'  => 'pages#play'
   get '/' => 'users#show'
