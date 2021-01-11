@@ -1,6 +1,5 @@
 class User < ApplicationRecord
-   has_many :scores
-   belongs_to :game, optional: true
+
     # Use the bcrypt gem to encrypt passwords when user creates account, and store only the encrypted version in the 'users' table
     has_secure_password
 
@@ -15,4 +14,5 @@ class User < ApplicationRecord
     validates :username, length: { minimum: 2 }
 
     # Relationships
+    has_many :games
 end

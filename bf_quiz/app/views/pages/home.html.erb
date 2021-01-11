@@ -25,12 +25,13 @@
           <%= f.hidden_field :status, value: false%>
           <%= f.hidden_field :user_id, value: @current_user%>
           <%= f.hidden_field :puzzle_id, value: 1%>
-          <%= f.submit id:'submit_button'%>
+          <%= f.submit "Start Application Quiz", id:'submit_button'%>
           <%end %>
 
-            <%= link_to 'Start Application Quiz', new_game_path, class: "button button-primary" %>
+            <%= link_to 'View Previous Applications', user_path(@current_user.id), class: "button button-primary" %>
 
-            <%= link_to 'View our top employees', scores_path, class: "button button-secondary" %>
+
+            <%# link_to 'View our top employees', scores_path, class: "button button-secondary" %>
         </nav>
     </section>
     <% else %>
@@ -54,7 +55,7 @@
 
             <%= link_to 'Login', login_path, class: "button button-secondary" %>
 
-            <%= link_to 'View our top employees', scores_path, class: "button button-secondary" %>
+            <%# link_to 'View our top employees', scores_path, class: "button button-secondary" %>
         </nav>
     </section>
     <%end%>

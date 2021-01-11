@@ -1,3 +1,22 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
-<%# TODO: PROFILE PAGE %>
+<h1>Welcome <%= @current_user.username%></h1>
+
+<p>Your Score History</p>
+<ul>
+  <% @games.each do |g| %>
+  <li>ID: <%= g.id%></li>
+
+  <li>Currently in progress:<%= g.in_progress%></li>
+  <li>Time Game Started: <%= g.created_at%></li>
+  <li>Last played: <%= g.updated_at%></li>
+  <li>Total Game Time: <%= g.game_time%></li>
+  <li>Score: <%= g.score%></li>
+  <br>
+  <%end%>
+</ul>
+
+<%= form_with model:@game, local:true, html: {multipart: true}  do |f| %>
+<%= f.hidden_field :status, value: false%>
+<%= f.hidden_field :user_id, value: @current_user%>
+<%= f.hidden_field :puzzle_id, value: 1%>
+<%= f.submit "Start a new Application Quiz", id:'submit_button'%>
+<%end %>
