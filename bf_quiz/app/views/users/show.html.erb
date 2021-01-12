@@ -14,9 +14,4 @@
   <%end%>
 </ul>
 
-<%= form_with model:@game, local:true, html: {multipart: true}  do |f| %>
-<%= f.hidden_field :status, value: false%>
-<%= f.hidden_field :user_id, value: @current_user%>
-<%= f.hidden_field :puzzle_id, value: 1%>
-<%= f.submit "Start a new Application Quiz", id:'submit_button'%>
-<%end %>
+<%= link_to "Return to Home Page", new_game_path %>
