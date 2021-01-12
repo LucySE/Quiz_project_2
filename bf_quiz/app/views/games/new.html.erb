@@ -1,4 +1,27 @@
 <h1>Games#new</h1>
 
+<% if @current_user.present? %>
+<section>
+    <header>
+        <h1 class="page-title">
+            The Software Interview Game
+        </h1>
+    </header>
+    <p>
+        The late nights, exams, group projects (oh the humanity...), billions of resumes and it’s all come down to this...the interview!
+        <br />
+        <br />
+        Well, we got you fam. Apply for the job at our 100% totally legit Tech Job Corp*. At Tech Job Corp we believe in ping pong tables, pointing at post-its, lines on whiteboards and slathering your laptop in stickers. Just submit your resume below and we’ll see you at your interview.
+    </p>
+</section>
+
+<section>
+    <nav aria-label="Game menu" class="main-menu">
+
+        
+    </nav>
+</section>
+
+<% end %>
 
 <%= button_to "create new game", action: "create" %>
