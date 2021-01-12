@@ -10,6 +10,7 @@ class GamesController < ApplicationController
     # User has requested a new game. Create a new game object and connect it to that user.
     # The newly created game is automatically the "in progress" game, and we also
     # initialise the score to zero.
+
     game  = Game.create user_id:@current_user.id, in_progress:true, score:0
      p game
      p game.errors
@@ -43,6 +44,7 @@ class GamesController < ApplicationController
 
   def show
     @game = Game.find params[:id]
+    @puzzle = Puzzle.where(game_id: params[:id])
   end
 
   def edit
