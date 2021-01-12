@@ -9,6 +9,16 @@
       "js.map": [
         "/packs/js/application-c421f086c42b5395d958.js.map"
       ]
+    },
+    "game": {
+      "js": [
+        "/packs/js/game-67a88a4b1ad7f378da21.js"
+      ],
+      "js.map": [
+        "/packs/js/game-67a88a4b1ad7f378da21.js.map"
+      ]
     }
-  }
+  },
+  "game.js": "/packs/js/game-67a88a4b1ad7f378da21.js",
+  "game.js.map": "/packs/js/game-67a88a4b1ad7f378da21.js.map"
 }
