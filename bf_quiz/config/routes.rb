@@ -5,8 +5,8 @@ Rails.application.routes.draw do
 
   # WHAT IS THIS ROUTE FOR? What is the play page?
   post '/'  => 'pages#play'
-  post '/users/:id'  => 'pages#play' 
-  get '/' => 'users#show'
+  post '/users/:id'  => 'users#show'
+  get '/users/:id' => 'users#show'
 
   # Create routes for users to create accounts, login and view/edit/delete their profile
   # users     GET    /users(.:format)          users#index

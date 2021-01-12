@@ -39,7 +39,10 @@ class GamesController < ApplicationController
   end
 
   def index
-    @games = Game.all
+    games = Game.all
+    sortedgames = games.sort_by { |game| [game.score, game.updated_at] }.reverse
+    @games = sortedgames.uniq(&:user_id)
+  
   end
 
   def show
