@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
 
-
+post '/users/:id' => 'users#show'
   # Create routes for users to create accounts, login and view/edit/delete their profile
   # users     GET    /users(.:format)          users#index
   #           POST   /users(.:format)          users#create
@@ -44,6 +44,6 @@ Rails.application.routes.draw do
   resources :games
 
     #  Create route for end of game
-    get '/gameover' => 'pages#gameover'
+    get 'games/:id/gameover' => 'games#gameover'
 
 end

@@ -42,12 +42,17 @@ class GamesController < ApplicationController
     games = Game.all
     sortedgames = games.sort_by { |game| [game.score, game.updated_at] }.reverse
     @games = sortedgames.uniq(&:user_id)
-  
+
   end
 
   def show
     @game = Game.find params[:id]
     @puzzle = Puzzle.where(game_id: params[:id])
+  end
+
+  def gameover
+      @game = Game.find params[:id]
+      @puzzle = Puzzle.where(game_id: params[:id])
   end
 
   def edit
