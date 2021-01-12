@@ -1,4 +1,4 @@
-console.log('HELLO JS');
+console.log('HELLO JS - am I changing?');
 
 $(document).ready(function(){
     console.log($)
