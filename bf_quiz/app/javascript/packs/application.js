@@ -6,4 +6,6 @@
 import Rails from "@rails/ujs"
 import "channels"
 
+require('jquery')
+
 Rails.start()
