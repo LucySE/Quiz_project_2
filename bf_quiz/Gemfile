@@ -50,5 +50,3 @@ end
 
 gem 'pry-rails'
 gem "httparty", "~> 0.18.1"
-
-# gem 'jquery-rails'
