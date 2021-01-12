@@ -12,8 +12,8 @@ class GamesController < ApplicationController
     # initialise the score to zero.
 
     game  = Game.create user_id:@current_user.id, in_progress:true, score:0
-    # p game
-    # p game.errors
+     p game
+     p game.errors
     # Make a request to the trivia API and retrieve 10 questions.
     # Save the questions from API as Puzzle items and associate them with the game.
     # Currently we are only utilising multiple choice by specifying that using the "type" param.
