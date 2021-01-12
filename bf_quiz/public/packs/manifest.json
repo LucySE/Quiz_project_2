@@ -1,24 +1,24 @@
 {
-  "application.js": "/packs/js/application-c421f086c42b5395d958.js",
-  "application.js.map": "/packs/js/application-c421f086c42b5395d958.js.map",
+  "application.js": "/packs/js/application-d856f28897c1a459f233.js",
+  "application.js.map": "/packs/js/application-d856f28897c1a459f233.js.map",
   "entrypoints": {
     "application": {
       "js": [
-        "/packs/js/application-c421f086c42b5395d958.js"
+        "/packs/js/application-d856f28897c1a459f233.js"
       ],
       "js.map": [
-        "/packs/js/application-c421f086c42b5395d958.js.map"
+        "/packs/js/application-d856f28897c1a459f233.js.map"
       ]
     },
     "game": {
       "js": [
-        "/packs/js/game-67a88a4b1ad7f378da21.js"
+        "/packs/js/game-21a7f8c6c5036b355c04.js"
       ],
       "js.map": [
-        "/packs/js/game-67a88a4b1ad7f378da21.js.map"
+        "/packs/js/game-21a7f8c6c5036b355c04.js.map"
       ]
     }
   },
-  "game.js": "/packs/js/game-67a88a4b1ad7f378da21.js",
-  "game.js.map": "/packs/js/game-67a88a4b1ad7f378da21.js.map"
+  "game.js": "/packs/js/game-21a7f8c6c5036b355c04.js",
+  "game.js.map": "/packs/js/game-21a7f8c6c5036b355c04.js.map"
 }
