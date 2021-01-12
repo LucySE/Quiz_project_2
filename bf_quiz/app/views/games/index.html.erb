@@ -1,11 +1,25 @@
-<h1>Games#index</h1>
+<h1>Leader Board of Hired Employees</h1>
 
 <% @games.each do |g|%>
-<span>
-<%= link_to g.puzzle.question, puzzle_path(g.puzzle_id)%>
+<span> Applicant Name:
+<%= g.user.username%>
 </span><br>
-<span>
-<%= link_to g.user.username, puzzle_path(g.puzzle_id)%>
+<span> Salary: $
+<%= g.score %>
 </span><br>
-
+<span> Date Hired:
+<%= g.updated_at %>
+</span><br>
+<span> Length of Interview:
+<%= g.created_at - g.updated_at %>
+</span><br>
+<br/>
 <% end %>
+
+
+<% if @current_user.games.exists?%>
+<%= button_to "Increase your Salary", action: "create" %>
+<%= button_to "Or Review your Previous interviews", user_path(@current_user.id), class: "button button-secondary" %>
+<% else %>
+<%= button_to "Get Hired", action: "create" %>
+<%end%>

@@ -1,4 +1,4 @@
-<h1>Games#new</h1>
+<h1>Welcome <%= @current_user.username %></h1>
 
 <% if @current_user.present? %>
 <section>
@@ -18,10 +18,15 @@
 <section>
     <nav aria-label="Game menu" class="main-menu">
 
-        
+
     </nav>
 </section>
 
 <% end %>
 
 <%= button_to "create new game", action: "create" %>
+<%= link_to 'View our top employees', games_path, class: "button button-secondary" %><br>
+<% if @current_user.games.exists?%>
+<%= link_to 'View your Interview History', user_path(@current_user.id), class: "button button-secondary" %>
+<%else%>
+<%end%>
