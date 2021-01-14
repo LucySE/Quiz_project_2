@@ -1,0 +1,17 @@
+<h1>Welcome <%= @current_user.username%></h1>
+
+<p>Your Score History</p>
+<ul>
+  <% @games.each do |g| %>
+  <li>ID: <%= g.id%></li>
+
+  <li>Currently in progress:<%= g.in_progress%></li>
+  <li>Time Game Started: <%= g.created_at%></li>
+  <li>Last played: <%= g.updated_at%></li>
+  <li>Total Game Time: <%= g.game_time%></li>
+  <li>Score: <%= g.score%></li>
+  <br>
+  <%end%>
+</ul>
+
+<%= link_to "Return to Home Page", new_game_path %>
