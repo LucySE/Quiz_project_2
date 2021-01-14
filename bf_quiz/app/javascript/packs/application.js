@@ -9,3 +9,4 @@ import "channels"
 require('jquery')
 
 Rails.start()
+pplication

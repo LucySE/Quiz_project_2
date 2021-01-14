@@ -1,11 +1,11 @@
 /* Our Variables
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 :root {
-  /* 
+  /*
     Primary dark colour used for main background and
-    when the text appears on a white background 
+    when the text appears on a white background
   */
-  --primary-dark-color: #011627; 
+  --primary-dark-color: #011627;
   --link-color: #1EAEDB;
   --hover-link-color: #0FA0CE;
 }
@@ -138,7 +138,7 @@ body {
   font-weight: 400;
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
-  background-color: var(--primary-dark-color); 
+  background-color: var(--primary-dark-color);
 }
 
 
@@ -254,7 +254,7 @@ select {
   border: 1px solid #D1D1D1;
   border-radius: 4px;
   box-shadow: none;
-  box-sizing: border-box; 
+  box-sizing: border-box;
   color: var(--primary-dark-color); ;
 }
 /* Removes awkward default styles on some inputs for iOS */
@@ -432,3 +432,6 @@ there.
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
+
+
+  

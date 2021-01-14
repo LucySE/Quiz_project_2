@@ -1,17 +1,25 @@
 <h1>Games#show</h1>
 
+<div id= puzzle_chose>
+<% p=@puzzle[3] %>
+</div>
 
 <ul>
-<% @puzzle.each do |p| %>
 
 <li> <%== p.question %> </li>
-<li><input type=checkbox></input> <%== p.solution %> </li>
+<li><input type=checkbox></input>
+  <%== p.solution %> </li>
 <li> <%== p.incorrect_a %> </li>
 <li> <%== p.incorrect_b %> </li>
 <li> <%== p.incorrect_c %> </li>
 <br>
-<%end%>
+</div>
+
 </ul>
 
+<button type="button" id="next" >Back</button>
+<button type="button" id="back">Next</button>
+<br>
+<br>
 
 <%= javascript_pack_tag 'game' %>
